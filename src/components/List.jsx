@@ -1,15 +1,26 @@
-function List () {
+import propTypes from 'prop-types';
+import ListItem from "./ListItem";
+
+function List ({friends}) {
+
+    const html = friends.map ((friend, idx)=> (
+        <li className="list__item" key={idx} >
+      <ListItem
+        quote={friend.quote}
+        character={friend.character}
+      />
+    </li>
+        ));
 
     return (
         <ul className="list">
-          <li className="list__item">
-            <p className="list__item__text">Pivot! Pivot! Pivot! Pivot! Pivot! - <span className="list__item__character">Ross</span></p>  
-          </li>
-          <li className="list__item">
-            <p className="list__item__text">Pivot! Pivot! Pivot! Pivot! Pivot! - <span className="list__item__character">Ross</span></p>  
-          </li>
+          {html}
         </ul>
     );
 }
+
+List.propTypes={
+    friends: propTypes.array
+};
 
 export default List ;
