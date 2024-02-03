@@ -1,5 +1,13 @@
+
 function FilterCharacter() {
-  return (
+
+    /*
+    const handleInput = ( event) => {
+        handleFilterCharacter(event.currentTarget.value)
+    };
+    */
+    
+    return (
     <>
       <label htmlFor="friends-name">Filtrar por personaje:</label>
       <select className="form__filter" type="text" id="friends-name">

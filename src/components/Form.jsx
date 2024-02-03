@@ -8,7 +8,7 @@ function Form({handleFilterQuote}) {
     return (
         <form className="form">
           <FilterQuote handleFilterQuote={handleFilterQuote}></FilterQuote>
-          <FilterCharacter></FilterCharacter>
+          <FilterCharacter/>
         </form>
     );
 }

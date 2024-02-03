@@ -16,11 +16,30 @@ function App() {
 
   const [filterQuote, setFilterQuote] = useState('')
 
+//const [filteredCharacter, setFilterCharacter] = useState('')
+
   const handleFilterQuote = (value) => {
     setFilterQuote(value)
   };
 
-  const filteredQuotes = friends.filter (friend => friend.quote.toLowerCase().includes(filterQuote.toLowerCase()));
+  /*const handleFilterCharacter = (value) => {
+    setFilterCharacter(value)
+  };*/
+
+  const filteredQuotes = friends.filter (friend => 
+    friend.quote.toLowerCase().includes(filterQuote.toLowerCase())
+  
+  );
+
+  /*const filteredFriends = filteredQuotes.filter (friend => {
+   // if (filterCharacter !== 'all') {
+      friend.character.toLowerCase().includes(filteredCharacter)
+   // }
+   // else {
+
+   // }
+     });
+  */
 
   return (
     <div className="container">
