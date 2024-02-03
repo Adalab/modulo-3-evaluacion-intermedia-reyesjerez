@@ -14,12 +14,20 @@ function App() {
 
   const [friends] = useState(dataFriends);
 
+  const [filterQuote, setFilterQuote] = useState('')
+
+  const handleFilterQuote = (value) => {
+    setFilterQuote(value)
+  };
+
+  const filteredQuotes = friends.filter (friend => friend.quote.toLowerCase().includes(filterQuote.toLowerCase()));
+
   return (
     <div className="container">
       <Header></Header>
       <main>
-        <Form></Form>
-        <List friends={friends}></List>
+        <Form handleFilterQuote= {handleFilterQuote}></Form>
+        <List friends={filteredQuotes}></List>
       </main>
     </div>
   );
