@@ -1,1 +1,44 @@
 @import 'core/reset';
+@import 'core/variables';
+
+.container {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title {
+    text-align: center;
+    color: $color-text;
+    padding: 30px;
+    padding-bottom: 10px;
+
+}
+
+.form {
+    padding: 15px;
+    border-bottom: solid 1px turquoise;
+    color: $color-text;
+}
+
+.list {
+    display: grid;
+    padding:  30px 20%;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 10px;
+    &__item {
+        list-style: none;
+        border: 1px turquoise solid;
+        padding: 5px;
+        border-radius: 5px;
+        text-align: left;
+        font-size: 14px;
+        color: $color-text;
+        &__character {
+            color: turquoise;
+        }
+    }
+}
+
