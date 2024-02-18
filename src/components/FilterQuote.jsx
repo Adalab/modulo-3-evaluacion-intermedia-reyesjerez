@@ -1,5 +1,4 @@
-import propTypes from "react";
-
+import PropTypes from 'react';
 
 function FilterQuote({handleFilterQuote}) {
 
@@ -21,5 +20,6 @@ function FilterQuote({handleFilterQuote}) {
   );
 }
 
+FilterQuote.prototype
 
 export default FilterQuote;

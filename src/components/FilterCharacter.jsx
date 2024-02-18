@@ -1,23 +1,25 @@
+import PropTypes from "react";
 
-function FilterCharacter() {
 
-    /*
-    const handleInput = ( event) => {
-        handleFilterCharacter(event.currentTarget.value)
+function FilterCharacter({handleFilterCharacter}) {
+
+  
+    const handleInputCharacter = ( event) => {
+      handleFilterCharacter(event.currentTarget.value)
     };
-    */
+   
     
     return (
     <>
       <label htmlFor="friends-name">Filtrar por personaje:</label>
-      <select className="form__filter" type="text" id="friends-name">
+      <select className="form__filter" type="text" id="friends-name" onInput={handleInputCharacter}>
         <option value="all">Todos</option>
-        <option value="ross">Ross</option>
-        <option value="monica">Monica</option>
-        <option value="joey">Joey</option>
-        <option value="phoebe">Phoebe</option>
-        <option value="chandler">Chandler</option>
-        <option value="rachel">Rachel</option>
+        <option value="Ross">Ross</option>
+        <option value="Monica">Monica</option>
+        <option value="Joey">Joey</option>
+        <option value="Phoebe">Phoebe</option>
+        <option value="Chandler">Chandler</option>
+        <option value="Rachel">Rachel</option>
       </select>
     </>
   );
